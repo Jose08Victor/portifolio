@@ -2,17 +2,24 @@ import styled from "styled-components";
 import { BackgroundShapes } from "./components/back-shapes/index.jsx";
 import { GlobalStyle } from "./global-style.jsx";
 import { Header } from "./components/header/index.jsx";
+import { AppRoutes } from "./pages/routes.jsx";
+import { Footer } from "./components/footer/index.jsx";
 
 function App() {
 
   return (
     <>
       <GlobalStyle />
+
       <BackgroundShapes />
+
       <Container>
         <Header />
-      </Container>
 
+        <AppRoutes />
+
+        <Footer />
+      </Container>
     </>
   )
 }

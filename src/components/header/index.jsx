@@ -1,30 +1,35 @@
 import styled from "styled-components";
 import logo from "../../assets/logo.svg";
+import { DefaultHr } from "../Default-Hr";
 
 export const Header = () => {
     return (
-        <Header1>
+        <HeadeR>
             <Div>
                 <a href="#">PROJETOS</a>
-                <Hr />
+                <DefaultHr />
             </Div>
 
             <Logo src={logo} alt="Logo" />
 
             <Div>
                 <a href="#">HABILIDADES</a>
-                <Hr />
+                <DefaultHr />
             </Div>
-        </Header1>
+        </HeadeR>
     )
 }
 
-const Header1 = styled.header`
+const HeadeR = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin: 10px 0;
     width: 75%;
+
+    @media (min-width: 1450px) {
+        margin-bottom: 60px;
+    }
 `
 
 const Div = styled.div`
@@ -42,16 +47,6 @@ const Div = styled.div`
     transform: scale(1.1);
     color: rgba(0, 219, 255, 1);
    }
-`
-
-const Hr = styled.hr`
-    width: 190px;
-    margin: 0 auto;
-    height: 2px;
-    background: linear-gradient(45deg, rgba(255, 255, 0, 1) 25%, rgba(0, 219, 255, 1) 50%, rgba(255, 255, 0, 1) 75%, rgba(0, 219, 255, 1) 100%);
-    border: none;
-    opacity: .8;
-    border-radius: 10px;
 `
 
 const Logo = styled.img`
