@@ -3,7 +3,7 @@
  width="130pt" height="130pt" viewBox="0 0 130 130"
  preserveAspectRatio="xMidYMid meet">
 <g transform="translate(0, 130) scale(0.1, -0.1)"
-fill="#222" stroke="none">
+fill="rgba(0, 219, 255, 1)" stroke="none">
 <path d="M340 1120 l0 -40 170 0 170 0 0 -162 c0 -90 -5 -203 -11 -252 -9 -76
 -9 -94 6 -133 15 -38 19 -42 33 -31 8 7 24 33 36 58 19 41 21 69 24 323 l4
 277 -216 0 -216 0 0 -40z"/>
