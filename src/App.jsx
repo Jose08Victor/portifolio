@@ -1,25 +1,25 @@
 import styled from "styled-components";
 import { BackgroundShapes } from "./components/back-shapes/index.jsx";
 import { GlobalStyle } from "./global-style.jsx";
-import { Header } from "./components/header/index.jsx";
 import { AppRoutes } from "./pages/routes.jsx";
-import { Footer } from "./components/footer/index.jsx";
+import { ThemeProvider } from "./theme-context/index.jsx";
 
 function App() {
 
   return (
     <>
       <GlobalStyle />
+      
+      <ThemeProvider>
 
-      <BackgroundShapes />
+        <BackgroundShapes />
 
-      <Container>
-        <Header />
+        <Container>
 
-        <AppRoutes />
+          <AppRoutes />
 
-        <Footer />
-      </Container>
+        </Container>
+      </ThemeProvider>
     </>
   )
 }

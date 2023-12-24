@@ -1,13 +1,18 @@
-// import { Home } from "../components/home"
-// import { Projects } from "../components/projects"
+import { Home } from "../components/home"
+import { Projects } from "../components/projects"
 import { Skills } from "../components/skills"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 export const AppRoutes = () => {
     return (
-        // <Home/>
+        <BrowserRouter>
+            <Routes>
+                <Route exact path='/portifolio' element={<Home />} />
 
-        // <Projects/>
+                <Route exact path='/projects' element={<Projects />} />
 
-        <Skills/>
+                <Route exact path='/skills' element={<Skills />} />
+            </Routes>
+        </BrowserRouter>
     )
 }

@@ -1,7 +1,11 @@
 import styled from "styled-components"
+import { Header } from "../header"
+import { Footer } from "../footer"
 
 export const Skills = () => {
     return (
+        <>
+        <Header/>
         <Main>
             <H1>Linguagens e Ferramentas</H1>
 
@@ -56,6 +60,9 @@ export const Skills = () => {
 
             </Tools>
         </Main>
+
+        <Footer/>
+        </>
     )
 }
 
@@ -67,7 +74,6 @@ const Main = styled.main`
 const H1 = styled.h1`
     text-align: center;
     margin-bottom: 30px;
-    color:rgba(0, 219, 255, 1);
 
     @media(min-width: 1450px){
         margin-bottom: 60px;

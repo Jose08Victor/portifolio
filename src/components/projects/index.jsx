@@ -3,37 +3,46 @@ import cellphone from "../../assets/pokemon-mobile.png"
 import styled from "styled-components"
 import { SocialMediasIcons } from "../social-media-icons"
 import { DefaultHr } from "../Default-Hr"
+import { Header } from "../header"
+import { ThemeContext, themes } from "../../theme-context"
+import { useContext } from "react"
 
 export const Projects = () => {
+
+    const { theme, setTheme } = useContext(ThemeContext)
+
     return (
-        <Main>
-            <Titles>
-                <a href="#"><H2>Pokemon Research</H2></a>
-                <a href="#"><H2>Desenvolvedor web Front End</H2></a>
-                <a href="#"><H2>Desenvolvedor</H2></a>
-                <a href="#"><H2>Desenvolvedor web Front</H2></a>
-                <a href="#"><H2>Desenvolvedor web</H2></a>
+        <>
+            <Header />
+            <Main>
+                <Titles>
+                    <a href="#"><H2>Pokemon Research</H2></a>
+                    <a href="#"><H2>Desenvolvedor web Front End</H2></a>
+                    <a href="#"><H2>Desenvolvedor</H2></a>
+                    <a href="#"><H2>Desenvolvedor web Front</H2></a>
+                    <a href="#"><H2>Desenvolvedor web</H2></a>
 
-                <Hr1 />
+                    <Hr1 theme={ theme } onMouseOver={() =>{setTheme(themes.light.reverse)}} onMouseOut={() =>{setTheme(themes.light)}}/>
 
-                <SocialMediasIcons />
-            </Titles>
+                    <SocialMediasIcons />
+                </Titles>
 
-            <Hr2 />
+                <Hr2 theme={ theme } onMouseOver={() =>{setTheme(themes.light.reverse)}} onMouseOut={() =>{setTheme(themes.light)}}/>
 
-            <Details>
-                <H1>Pokemon Research</H1>
+                <Details>
+                    <H1>Pokemon Research</H1>
 
-                <Div>
-                    <Pc src={pc} alt="Computador" />
-                    <Cellphone src={cellphone} alt="Celular" />
-                </Div>
+                    <Div>
+                        <Pc src={pc} alt="Computador" />
+                        <Cellphone src={cellphone} alt="Celular" />
+                    </Div>
 
-                <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto voluptatem rerum eius explicabo ut non nostrum placeat eaque, optio laborum eos laudantium, est numquam! Ab ad nostrum aliquam obcaecati veniam?
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure quisquam hic similique soluta deleniti! Odit tempore architecto sed perspiciatis minus dicta cumque error praesentium, saepe ea. Laborum quas ea dolor!
-                </P>
-            </Details>
-        </Main>
+                    <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto voluptatem rerum eius explicabo ut non nostrum placeat eaque, optio laborum eos laudantium, est numquam! Ab ad nostrum aliquam obcaecati veniam?
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure quisquam hic similique soluta deleniti! Odit tempore architecto sed perspiciatis minus dicta cumque error praesentium, saepe ea. Laborum quas ea dolor!
+                    </P>
+                </Details>
+            </Main>
+        </>
     )
 }
 
@@ -57,11 +66,13 @@ const Titles = styled.div`
 const Hr1 = styled(DefaultHr)`
     margin-top: 30px;
     width: 300px;
+    background: linear-gradient(45deg, ${props => props.theme.secondary} 25%, ${props => props.theme.primary} 50%, ${props => props.theme.secondary} 75%, ${props => props.theme.primary} 100%);
 `
 const Hr2 = styled(DefaultHr)`
     margin-top: 30px;
     width: 2px;
     height: 450px;
+    background: linear-gradient(45deg, ${props => props.theme.secondary} 25%, ${props => props.theme.primary} 50%, ${props => props.theme.secondary} 75%, ${props => props.theme.primary} 100%);
 `
 
 const H2 = styled.h2`
@@ -97,10 +108,20 @@ const Div = styled.div`
 
 const Pc = styled.img`
     width: 55%;
+    transition: .3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
 `
 
 const Cellphone = styled.img`
     width: 16%;
+    transition: .3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
 `
 
 const P = styled.p`
