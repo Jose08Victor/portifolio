@@ -2,15 +2,22 @@ import styled from "styled-components";
 import { BackgroundShapes } from "./components/back-shapes/index.jsx";
 import { GlobalStyle } from "./global-style.jsx";
 import { AppRoutes } from "./pages/routes.jsx";
-import { ThemeProvider } from "./theme-context/index.jsx";
+import { ThemeProvider } from "./theme-context";
+// import { Hahai } from "./teste";
+
 
 function App() {
 
   return (
     <>
-      <GlobalStyle />
-      
+    {/* <ThemeProvider>
+
+    <Hahai/>
+
+    </ThemeProvider> */}
       <ThemeProvider>
+      
+      <GlobalStyle />
 
         <BackgroundShapes />
 
@@ -26,7 +33,7 @@ function App() {
 
 const Container = styled.div`
     width: 99%;
-    background-color: #222;
+    background-color: #181818;
     margin: 1vh auto auto;
     position: relative;
     min-height: 98vh;

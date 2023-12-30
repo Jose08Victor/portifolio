@@ -1,11 +1,12 @@
-
 import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = () => {
- return <Reset />
+
+    return <Reset />
 
 }
- const Reset = createGlobalStyle`
+
+const Reset = createGlobalStyle`
  * {
  padding: 0;
  margin: 0;
@@ -27,6 +28,6 @@ body {
  position: relative;
  display: flex;
  align-items: center;
- background-color: #222;
+ background-color: #181818;
 }
  ` 
