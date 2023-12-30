@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { ThemeContext, themes } from '../../theme-context';
+import { ThemeContext } from '../../theme-context';
 import { useContext } from "react";
 
 export const BackgroundShapes = () => {
@@ -7,10 +7,10 @@ export const BackgroundShapes = () => {
 
     return (
         <>
-            <BoxOne theme={theme} onMouseOver={() =>{setTheme(themes.light.reverse)}} onMouseOut={() =>{setTheme(themes.light)}}></BoxOne>
-            <BoxTwo theme={theme} onMouseOver={() =>{setTheme(themes.light.reverse)}} onMouseOut={() =>{setTheme(themes.light)}}></BoxTwo>
-            <BoxThree theme={theme} onMouseOver={() =>{setTheme(themes.light.reverse)}} onMouseOut={() =>{setTheme(themes.light)}}></BoxThree>
-            <BoxFour theme={theme} onMouseOver={() =>{setTheme(themes.light.reverse)}} onMouseOut={() =>{setTheme(themes.light)}}></BoxFour>
+            <BoxOne theme={theme} onMouseOver={ () => setTheme({...theme, opacity: 1})} onMouseOut={ () => setTheme({...theme, opacity: .6})}></BoxOne>
+            <BoxTwo theme={theme} onMouseOver={ () => setTheme({...theme, opacity: 1})} onMouseOut={ () => setTheme({...theme, opacity: .6})}></BoxTwo>
+            <BoxThree theme={theme} onMouseOver={ () => setTheme({...theme, opacity: 1})} onMouseOut={ () => setTheme({...theme, opacity: .6})}></BoxThree>
+            <BoxFour theme={theme} onMouseOver={ () => setTheme({...theme, opacity: 1})} onMouseOut={ () => setTheme({...theme, opacity: .6})}></BoxFour>
         </>
     )
 }
@@ -18,7 +18,8 @@ export const BackgroundShapes = () => {
 const Div = styled.div`
     width: 200px;
     height: 200px;
-    background: linear-gradient(45deg, ${props => props.theme.primary} 25%, ${props => props.theme.secondary} 50%, ${props => props.theme.primary} 75%, ${props => props.theme.secondary} 100%);
+    background: linear-gradient(45deg, ${props => props.theme.color} 25%, ${props => props.theme.color} 50%, ${props => props.theme.color} 75%, ${props => props.theme.color} 100%);
+    opacity: ${props => props.theme.opacity};
     position: absolute;
 `
 

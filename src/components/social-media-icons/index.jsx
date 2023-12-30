@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { ThemeContext, themes } from '../../theme-context';
+import { ThemeContext } from '../../theme-context';
 import { useContext } from "react";
 
 export const SocialMediasIcons = () => {
@@ -57,16 +57,17 @@ const Li = styled.li`
 `
 
 const Icon = styled.svg`
-    background: linear-gradient(45deg, ${themes.light.primary} 0%, ${themes.light.primary} 100%) center no-repeat;
+    background: linear-gradient(45deg, ${props => props.theme.color} 0%, ${props => props.theme.color} 100%) center no-repeat;
     background-size: 27.5px 27.5px;
-    fill: #222;
+    fill: #181818;
     cursor: pointer;
     width: 31px;
     height: 31px;
     transition: .3s ease-in-out;
+    opacity: .6;
 
     &:hover {
-      background-image: linear-gradient(45deg, ${themes.light.secondary} 0%, ${themes.light.secondary} 100%);
+      opacity: 1;
       transform: scale(1.2);
   }
 `

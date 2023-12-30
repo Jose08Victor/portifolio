@@ -1,67 +1,80 @@
 import styled from "styled-components"
 import { Header } from "../header"
 import { Footer } from "../footer"
+import { useContext } from "react"
+import { ThemeContext } from "../../theme-context"
 
 export const Skills = () => {
+    const { theme } = useContext(ThemeContext)
+
+
+    Header().type.componentStyle.rules = `display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px 0;
+    width: 75%;
+    @media (min-width: 1450px) { margin-bottom: 60px; }
+    .venha { color: ${theme.color}; transform: scale(1.28); }`
+
     return (
         <>
-        <Header/>
-        <Main>
-            <H1>Linguagens e Ferramentas</H1>
+            <Header />
+            <Main>
+                <H1>Linguagens e Ferramentas</H1>
 
-<Tools>
-            <Div>
-                <H3>JavaScript</H3>
-                <Img src="https://placeholder.com/60" />
-                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nostrum? Corporis, ex adipisci explicabo veritatis dignissimos consectetur delectus aliquid harum.</P>
-            </Div>
+                <Tools>
+                    <Div>
+                        <H3 theme={theme}>JavaScript</H3>
+                        <Img src="https://placeholder.com/60" />
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nostrum? Corporis, ex adipisci explicabo veritatis dignissimos consectetur delectus aliquid harum.</P>
+                    </Div>
 
-            <Div>
-                <H3>JavaScript</H3>
-                <Img src="https://placeholder.com/60" />
-                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nostrum? Corporis, ex adipisci explicabo veritatis dignissimos consectetur delectus aliquid harum.</P>
-            </Div>
+                    <Div>
+                        <H3 theme={theme}>JavaScript</H3>
+                        <Img src="https://placeholder.com/60" />
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nostrum? Corporis, ex adipisci explicabo veritatis dignissimos consectetur delectus aliquid harum.</P>
+                    </Div>
 
-            <Div>
-                <H3>JavaScript</H3>
-                <Img src="https://placeholder.com/60" />
-                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nostrum? Corporis, ex adipisci explicabo veritatis dignissimos consectetur delectus aliquid harum.</P>
-            </Div>
+                    <Div>
+                        <H3 theme={theme}>JavaScript</H3>
+                        <Img src="https://placeholder.com/60" />
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nostrum? Corporis, ex adipisci explicabo veritatis dignissimos consectetur delectus aliquid harum.</P>
+                    </Div>
 
-            <Div>
-                <H3>JavaScript</H3>
-                <Img src="https://placeholder.com/60" />
-                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nostrum? Corporis, ex adipisci explicabo veritatis dignissimos consectetur delectus aliquid harum.</P>
-            </Div>
+                    <Div>
+                        <H3 theme={theme}>JavaScript</H3>
+                        <Img src="https://placeholder.com/60" />
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nostrum? Corporis, ex adipisci explicabo veritatis dignissimos consectetur delectus aliquid harum.</P>
+                    </Div>
 
-            <Div>
-                <H3>JavaScript</H3>
-                <Img src="https://placeholder.com/60" />
-                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nostrum? Corporis, ex adipisci explicabo veritatis dignissimos consectetur delectus aliquid harum.</P>
-            </Div>
+                    <Div>
+                        <H3 theme={theme}>JavaScript</H3>
+                        <Img src="https://placeholder.com/60" />
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nostrum? Corporis, ex adipisci explicabo veritatis dignissimos consectetur delectus aliquid harum.</P>
+                    </Div>
 
-            <Div>
-                <H3>JavaScript</H3>
-                <Img src="https://placeholder.com/60" />
-                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nostrum? Corporis, ex adipisci explicabo veritatis dignissimos consectetur delectus aliquid harum.</P>
-            </Div>
+                    <Div>
+                        <H3 theme={theme}>JavaScript</H3>
+                        <Img src="https://placeholder.com/60" />
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nostrum? Corporis, ex adipisci explicabo veritatis dignissimos consectetur delectus aliquid harum.</P>
+                    </Div>
 
-            <Div>
-                <H3>JavaScript</H3>
-                <Img src="https://placeholder.com/60" />
-                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nostrum? Corporis, ex adipisci explicabo veritatis dignissimos consectetur delectus aliquid harum.</P>
-            </Div>
+                    <Div>
+                        <H3 theme={theme}>JavaScript</H3>
+                        <Img src="https://placeholder.com/60" />
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nostrum? Corporis, ex adipisci explicabo veritatis dignissimos consectetur delectus aliquid harum.</P>
+                    </Div>
 
-            <Div>
-                <H3>JavaScript</H3>
-                <Img src="https://placeholder.com/60" />
-                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nostrum? Corporis, ex adipisci explicabo veritatis dignissimos consectetur delectus aliquid harum.</P>
-            </Div>
+                    <Div>
+                        <H3 theme={theme}>JavaScript</H3>
+                        <Img src="https://placeholder.com/60" />
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nostrum? Corporis, ex adipisci explicabo veritatis dignissimos consectetur delectus aliquid harum.</P>
+                    </Div>
 
-            </Tools>
-        </Main>
+                </Tools>
+            </Main>
 
-        <Footer/>
+            <Footer />
         </>
     )
 }
@@ -114,7 +127,7 @@ const Img = styled.img`
 const H3 = styled.h3`
     text-align: center;
     margin-bottom: 8px;
-    color: rgba(255, 255, 0, 1);
+    color: ${props => props.theme.color};
 `
 
 const P = styled.p`

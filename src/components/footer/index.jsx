@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { DefaultHr } from "../Default-Hr"
 import { SocialMediasIcons } from "../social-media-icons"
-import { ThemeContext, themes } from '../../theme-context';
+import { ThemeContext } from '../../theme-context';
 import { useContext } from "react";
 
 export const Footer = () => {
@@ -10,7 +10,9 @@ export const Footer = () => {
   return (
     <FooteR>
       <SocialMediasIcons />
-      <Hr theme={ theme } onMouseOver={() =>{setTheme(themes.light.reverse)}} onMouseOut={() =>{setTheme(themes.light)}}/>
+      <Hr theme={ theme } 
+        onMouseOver={ () => setTheme({...theme, opacity: 1})}
+        onMouseOut={ () => setTheme({...theme, opacity: .6})}/>
     </FooteR>
   )
 }
@@ -22,5 +24,6 @@ const FooteR = styled.footer`
 const Hr = styled(DefaultHr)`
    margin-top: 30px;
    width: 300px;
-   background: linear-gradient(45deg, ${props => props.theme.primary} 25%, ${props => props.theme.secondary} 50%, ${props => props.theme.primary} 75%, ${props => props.theme.secondary} 100%);
+   background: ${props => props.theme.color};
+   opacity: ${props => props.theme.opacity};
 `

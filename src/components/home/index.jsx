@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { DefaultHr } from "../Default-Hr"
 import { Header } from "../header"
 import { Footer } from "../footer"
-import { ThemeContext, themes } from '../../theme-context';
+import { ThemeContext } from '../../theme-context';
 import { useContext } from "react";
 
 export const Home = () => {
@@ -24,14 +24,18 @@ export const Home = () => {
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, sunt ducimus iusto nesciunt pariatur impedit! Vitae nulla a culpa repudiandae, atque ipsam ab fugit dolorem ipsum illo porro harum magnam.
                     </P>
 
-                    <Div>
+                    <Div theme={theme}>
                         <a href="#">Veja o meu CV</a>
 
-                        <Hr theme={theme} onMouseOver={() => { setTheme(themes.light.reverse) }} onMouseOut={() => { setTheme(themes.light) }} />
+                        <Hr theme={theme} 
+                        onMouseOver={ () => setTheme({...theme, opacity: 1})}
+                        onMouseOut={ () => setTheme({...theme, opacity: .6})} />
                     </Div>
                 </Description>
-
-                <Img theme={theme} src="https://placeholder.com/250x250" alt="img" />
+                <T theme={theme} onMouseOver={ () => setTheme({...theme, opacity: 1})}
+                        onMouseOut={ () => setTheme({...theme, opacity: .6})}>
+                    <Img theme={theme} src="https://placeholder.com/250x250" alt="img" />
+                </T>
             </Main>
 
             <Footer />
@@ -71,7 +75,7 @@ const H1 = styled.h1`
 `
 
 const Span = styled.span`
-    color: ${props => props.theme.secondary};
+    color: ${props => props.theme.color};
 `
 
 const P = styled.p`
@@ -86,28 +90,35 @@ const Div = styled.div`
     transition: .3s ease-in-out;
 
     &:hover {
+        color: ${props => props.theme.color};
         transform: scale(1.1);
-        color: ${themes.light.primary};
     }
  }
 `
 
 const Hr = styled(DefaultHr)`
     width: 120px;
-    background: linear-gradient(45deg, ${props => props.theme.primary} 25%, ${props => props.theme.secondary} 50%, ${props => props.theme.primary} 75%, ${props => props.theme.secondary} 100%);
+    background: ${props => props.theme.color};
+    opacity: ${props => props.theme.opacity};
 `
 
+const T = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: ${props => props.theme.color};
+    width: 258px;
+    height: 258px;
+    border-radius: 25px;
+    border-bottom-left-radius: 70px;
+    border-top-right-radius: 70px;
+
+    @media (max-width: 1210px) {      
+        display: none;
+     }
+    `
 const Img = styled.img`
     border-radius: 25px;
     border-bottom-left-radius: 70px;
     border-top-right-radius: 70px;
-    border: 3px solid;
-    border-right-color: ${props => props.theme.primary};
-    border-top-color: ${props => props.theme.primary};
-    border-bottom-color: ${props => props.theme.secondary};
-    border-left-color: ${props => props.theme.secondary};
-
-    @media (max-width: 1210px) {      
-       display: none;
-    }
 `
