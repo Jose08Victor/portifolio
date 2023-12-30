@@ -11,6 +11,8 @@ export const AppRoutes = () => {
 
                 <Route exact path='/projects' element={<Projects />} />
 
+                <Route exact path='/projects/:id' element={<Projects />} />
+
                 <Route exact path='/skills' element={<Skills />} />
             </Routes>
         </BrowserRouter>
