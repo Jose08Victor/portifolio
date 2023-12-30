@@ -7,15 +7,6 @@ import { ThemeContext } from "../../theme-context"
 export const Skills = () => {
     const { theme } = useContext(ThemeContext)
 
-
-    Header().type.componentStyle.rules = `display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: 10px 0;
-    width: 75%;
-    @media (min-width: 1450px) { margin-bottom: 60px; }
-    .venha { color: ${theme.color}; transform: scale(1.28); }`
-
     return (
         <>
             <Header />

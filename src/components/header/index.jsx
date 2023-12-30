@@ -1,7 +1,7 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import logo from "../../assets/logo.svg";
 import { DefaultHr } from "../Default-Hr";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { ThemeContext, themes } from '../../theme-context';
 import { useContext } from "react";
 
@@ -11,39 +11,32 @@ export const Header = () => {
     return (
         <HeadeR>
             <Div theme={theme}>
-                <Link to={'/projects'} className="vem"
+                <NavLink to={'/projects'}
                     onClick={() => {
                         themes.index++
                         setTheme({ ...theme, color: themes.colors[themes.index < themes.colors.length ? themes.index : themes.index = 0] })
-                    }}  > PROJETOS </Link>
+                    }}  > PROJETOS </NavLink>
 
                 <Hr theme={theme}
                     onMouseOver={() => setTheme({ ...theme, opacity: 1 })}
                     onMouseOut={() => setTheme({ ...theme, opacity: .6 })} />
             </Div>
 
-            <Link to={'/portifolio'}>
+            <NavLink to={'/portifolio'}>
                 <Logo src={logo} alt="Logo" theme={theme}
                     onClick={() => {
-                        HeadeR.componentStyle.rules = `display: flex;
-                        align-items: center;
-                        justify-content: space-around;
-                        margin: 10px 0;
-                        width: 75%;
-                        @media (min-width: 1450px) { margin-bottom: 60px; }`
-
                         themes.index++
                         setTheme({ ...theme, color: themes.colors[themes.index < themes.colors.length ? themes.index : themes.index = 0] })
                     }}
                     onMouseOver={() => setTheme({ ...theme, opacity: 1 })}
                     onMouseOut={() => setTheme({ ...theme, opacity: .6 })} />
-            </Link>
+            </NavLink>
 
             <Div theme={theme}>
-                <Link to={'/skills'} className="venha"
+                <NavLink to={'/skills'} className="venha"
                     onClick={() => {
                         setTheme({ ...theme, color: themes.colors[themes.index < themes.colors.length ? themes.index : themes.index = 0] })
-                    }}> HABILIDADES </Link>
+                    }}> HABILIDADES </NavLink>
 
                 <Hr theme={theme}
                     onMouseOver={() => setTheme({ ...theme, opacity: 1 })}
@@ -78,7 +71,16 @@ const Div = styled.div`
             transform: scale(1.1);
             color: ${props => props.theme.color};
         }
-}
+
+        &.active {
+            color: ${props => props.theme.color};
+            transform: scale(1.28);
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
 `
 
 const Logo = styled.img`

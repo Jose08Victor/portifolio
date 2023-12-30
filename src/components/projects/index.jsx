@@ -12,14 +12,6 @@ export const Projects = () => {
 
     const { theme, setTheme } = useContext(ThemeContext)
 
-    Header().type.componentStyle.rules = `display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: 10px 0;
-    width: 75%;
-    @media (min-width: 1450px) { margin-bottom: 60px; }
-    .vem { color: ${theme.color}; transform: scale(1.28);}`
-
     return (
         <>
             <Header />
