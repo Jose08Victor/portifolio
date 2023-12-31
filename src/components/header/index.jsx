@@ -8,6 +8,7 @@ import { useContext } from "react";
 export const Header = () => {
 
     const { theme, setTheme } = useContext(ThemeContext)
+
     return (
         <HeadeR>
             <Div theme={theme}>
@@ -33,8 +34,9 @@ export const Header = () => {
             </NavLink>
 
             <Div theme={theme}>
-                <NavLink to={'/skills'} className="venha"
+                <NavLink to={'/skills'}
                     onClick={() => {
+                        themes.index++
                         setTheme({ ...theme, color: themes.colors[themes.index < themes.colors.length ? themes.index : themes.index = 0] })
                     }}> HABILIDADES </NavLink>
 
@@ -45,6 +47,7 @@ export const Header = () => {
         </HeadeR>
     )
 }
+
 const HeadeR = styled.header`
     display: flex;
     align-items: center;

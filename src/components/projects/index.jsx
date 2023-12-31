@@ -1,4 +1,3 @@
-
 import styled from "styled-components"
 import { SocialMediasIcons } from "../social-media-icons"
 import { DefaultHr } from "../Default-Hr"
@@ -6,7 +5,8 @@ import { Header } from "../header"
 import { ThemeContext, themes } from "../../theme-context"
 import { useContext } from "react"
 import { Project } from "../project"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
+import { data } from "../../data"
 
 export const Projects = () => {
 
@@ -15,28 +15,20 @@ export const Projects = () => {
     return (
         <>
             <Header />
-            <Main>
+            <Main theme={theme}>
                 <Titles>
-                <Link to={`/projects/2`}><H2 theme={theme} onClick={() => {
-                        themes.index++
-                        setTheme({ ...theme, color: themes.colors[themes.index < themes.colors.length ? themes.index : themes.index = 0] })
-                    }}>Pokemon Research</H2></Link>
-                    <a href="#"><H2 theme={theme} onClick={() => {
-                        themes.index++
-                        setTheme({ ...theme, color: themes.colors[themes.index < themes.colors.length ? themes.index : themes.index = 0] })
-                    }}>Desenvolvedor web Front End</H2></a>
-                    <a href="#"><H2 theme={theme} onClick={() => {
-                        themes.index++
-                        setTheme({ ...theme, color: themes.colors[themes.index < themes.colors.length ? themes.index : themes.index = 0] })
-                    }}>Desenvolvedor</H2></a>
-                    <a href="#"><H2 theme={theme} onClick={() => {
-                        themes.index++
-                        setTheme({ ...theme, color: themes.colors[themes.index < themes.colors.length ? themes.index : themes.index = 0] })
-                    }}>Desenvolvedor web Front</H2></a>
-                    <a href="#"><H2 theme={theme} onClick={() => {
-                        themes.index++
-                        setTheme({ ...theme, color: themes.colors[themes.index < themes.colors.length ? themes.index : themes.index = 0] })
-                    }}>Desenvolvedor web</H2></a>
+                    {
+                        data.map((e) => {
+                            return (
+                                <NavLink to={`/projects/${e.id}`} state={e}>
+                                    <h2 onClick={() => {
+                                        themes.index++
+                                        setTheme({ ...theme, color: themes.colors[themes.index < themes.colors.length ? themes.index : themes.index = 0] })
+                                    }}>{e.title}</h2>
+                                </NavLink>
+                            )
+                        })
+                    }
 
                     <Hr1 theme={theme} onMouseOver={() => setTheme({ ...theme, opacity: 1 })}
                         onMouseOut={() => setTheme({ ...theme, opacity: .6 })} />
@@ -47,7 +39,7 @@ export const Projects = () => {
                 <Hr2 theme={theme} onMouseOver={() => setTheme({ ...theme, opacity: 1 })}
                     onMouseOut={() => setTheme({ ...theme, opacity: .6 })} />
 
-                <Project/>
+                <Project />
             </Main>
         </>
     )
@@ -57,6 +49,21 @@ const Main = styled.main`
     display: flex;
     justify-content: space-between;
     width: 92%;
+
+    a h2{
+        transition: .3s ease-in-out;
+        padding-bottom: 2px;
+
+        &:hover {
+            transform: scale(1.1);
+            color: ${props => props.theme.color}; 
+        }
+    }
+
+    a.active h2 {
+        color: ${props => props.theme.color};
+        border-bottom: 1px solid ${props => props.theme.color};     
+    }
 
     @media(min-width: 1450px) {
         width: 80%
@@ -68,6 +75,7 @@ const Titles = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+
 `
 
 const Hr1 = styled(DefaultHr)`
@@ -82,13 +90,4 @@ const Hr2 = styled(DefaultHr)`
     height: 450px;
     background: ${props => props.theme.color};
     opacity: ${props => props.theme.opacity};
-`
-
-const H2 = styled.h2`
-    transition: .3s ease-in-out;
-
-    &:hover {
-        transform: scale(1.1);
-        color: ${props => props.theme.color}; 
-    }
 `
