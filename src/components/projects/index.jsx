@@ -6,7 +6,7 @@ import { ThemeContext, themes } from "../../theme-context"
 import { useContext } from "react"
 import { Project } from "../project"
 import { NavLink } from "react-router-dom"
-import { data } from "../../data"
+import { projectData } from "../../data"
 
 export const Projects = () => {
 
@@ -18,7 +18,7 @@ export const Projects = () => {
             <Main theme={theme}>
                 <Titles>
                     {
-                        data.map((e) => {
+                        projectData.map((e) => {
                             return (
                                 <NavLink to={`/projects/${e.id}`} state={e}>
                                     <h2 onClick={() => {

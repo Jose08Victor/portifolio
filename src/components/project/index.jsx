@@ -3,7 +3,7 @@ import { DefaultHr } from "../Default-Hr"
 import { useContext } from "react"
 import { ThemeContext } from "../../theme-context"
 import { useLocation } from "react-router-dom"
-import { data } from "../../data"
+import { projectData } from "../../data"
 
 export const Project = () => {
 
@@ -14,21 +14,21 @@ export const Project = () => {
     return (
         <>
             <Details>
-                <H1>{state ? state.title : data[0].title}</H1>
+                <H1>{state ? state.title : projectData[0].title}</H1>
 
                 <Div>
-                    <Pc src={state ? state.desktopImage : data[0].desktopImage} alt="Computador" />
+                    <Pc src={state ? state.desktopImage : projectData[0].desktopImage} alt="Computador" />
                     <Diva>
-                        <Cellphone src={state ? state.mobileImage : data[0].mobileImage} alt="Celular" />
+                        <Cellphone src={state ? state.mobileImage : projectData[0].mobileImage} alt="Celular" />
                         <Divo>
                             <div>
-                                <A href={state ? state.site : data[0].site} target="_blank" theme={theme}><p>View Site</p></A>
+                                <A href={state ? state.site : projectData[0].site} target="_blank" theme={theme}><p>View Site</p></A>
 
                                 <Hr3 theme={theme} onMouseOver={() => setTheme({ ...theme, opacity: 1 })}
                                     onMouseOut={() => setTheme({ ...theme, opacity: .6 })} />
                             </div>
                             <div>
-                                <A href={state ? state.github : data[0].github} target="_blank" theme={theme}><p>Github</p></A>
+                                <A href={state ? state.github : projectData[0].github} target="_blank" theme={theme}><p>Github</p></A>
 
                                 <Hr3 theme={theme} onMouseOver={() => setTheme({ ...theme, opacity: 1 })}
                                     onMouseOut={() => setTheme({ ...theme, opacity: .6 })} />
@@ -37,7 +37,7 @@ export const Project = () => {
                     </Diva>
                 </Div>
 
-                <P>{state ? state.description : data[0].description}</P>
+                <P>{state ? state.description : projectData[0].description}</P>
             </Details>
         </>
     )
@@ -106,6 +106,7 @@ const Divo = styled.div`
 `
 
 const A = styled.a`
+
     p{
         transition: .3s ease-in-out;
     
@@ -117,5 +118,5 @@ const A = styled.a`
 `
 
 const P = styled.p`
-margin-bottom: 10px;
+    margin-bottom: 10px;
 `
