@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { DefaultHr } from "../Default-Hr"
 import { useContext } from "react"
 import { ThemeContext } from "../../theme-context"
@@ -22,7 +22,7 @@ export const Project = () => {
                         <Cellphone src={state ? state.mobileImage : projectData[0].mobileImage} alt="Celular" />
                         <Divo>
                             <div>
-                                <A href={state ? state.site : projectData[0].site} target="_blank" theme={theme}><p>View Site</p></A>
+                                <A className="site" href={state ? state.site : projectData[0].site} target="_blank" theme={theme}><p>View Site</p></A>
 
                                 <Hr3 theme={theme} onMouseOver={() => setTheme({ ...theme, opacity: 1 })}
                                     onMouseOut={() => setTheme({ ...theme, opacity: .6 })} />
@@ -103,6 +103,10 @@ const Divo = styled.div`
     width: 135%;
     display: flex;
     justify-content: space-between;
+
+    ${props => !props.children[0].props.children[0].props.href && css `    
+        justify-content: center;           
+    `}
 `
 
 const A = styled.a`
@@ -115,6 +119,10 @@ const A = styled.a`
             color: ${props => props.theme.color}; 
         }
     }
+
+    ${props => !props.href && css `    
+        display: none;           
+    `}
 `
 
 const P = styled.p`

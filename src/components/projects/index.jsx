@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { SocialMediasIcons } from "../social-media-icons"
 import { DefaultHr } from "../Default-Hr"
 import { Header } from "../header"
@@ -16,16 +16,21 @@ export const Projects = () => {
         <>
             <Header />
             <Main theme={theme}>
-                <Titles>
+                <Titles>                  
                     {
                         projectData.map((e) => {
                             return (
+                                <Li key={e.id} theme={theme} onClick={(e) => {
+                                    document.querySelector("h2").style = "color: blue"
+ console.log(e);
+                                }}>
                                 <NavLink to={`/projects/${e.id}`} state={e}>
                                     <h2 onClick={() => {
                                         themes.index++
                                         setTheme({ ...theme, color: themes.colors[themes.index < themes.colors.length ? themes.index : themes.index = 0] })
                                     }}>{e.title}</h2>
                                 </NavLink>
+                                </Li>
                             )
                         })
                     }
@@ -49,14 +54,15 @@ const Main = styled.main`
     display: flex;
     justify-content: space-between;
     width: 92%;
-
+    
     a h2{
         transition: .3s ease-in-out;
         padding-bottom: 2px;
-
+        
         &:hover {
             transform: scale(1.1);
-            color: ${props => props.theme.color}; 
+            color: ${props => props.theme.color};
+            
         }
     }
 
@@ -70,7 +76,7 @@ const Main = styled.main`
     }
 `
 
-const Titles = styled.div`
+const Titles = styled.ul`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,6 +84,14 @@ const Titles = styled.div`
 
 `
 
+const Li = styled.li`
+${props => props.children.props.to === "/projects/1" && css `    
+a h2{
+    color: ${props => props.theme.color};
+        border-bottom: 1px solid ${props => props.theme.color}; 
+}    
+    `}
+`
 const Hr1 = styled(DefaultHr)`
     margin-top: 30px;
     width: 300px;
