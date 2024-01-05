@@ -84,6 +84,27 @@ const Div = styled.div`
             }
         }
     }
+
+    @media (max-width: 600px) {
+        gap: 10px;
+        a {
+            font-size: 18px;
+
+            &.active {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    @media (max-width: 375px) {
+        a {
+            font-size: 16px;
+
+            &.active {
+                transform: scale(1.15);
+            }
+        }
+    }
 `
 
 const Logo = styled.img`
@@ -94,11 +115,25 @@ const Logo = styled.img`
 
     &:hover {
         transform: scale(1.24);
-    }    
+    }   
+    
+    @media (max-width: 600px) {
+    width: 80px;
+    height: 80px;
+    background-size: 60px 60px;
+    }
 `
 
 const Hr = styled(DefaultHr)`
     width: 190px;
     background: ${props => props.theme.color};
     opacity: ${props => props.theme.opacity};
+
+    @media (max-width: 600px) {
+        width: 140px;
+           }
+
+    @media (max-width: 400px) {
+        width: 100px;
+        }
 `

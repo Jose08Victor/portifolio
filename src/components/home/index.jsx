@@ -4,38 +4,36 @@ import { Header } from "../header"
 import { Footer } from "../footer"
 import { ThemeContext } from '../../theme-context';
 import { useContext } from "react";
+import josePhoto from "../../assets/jose-victor.jpg"
 
 export const Home = () => {
     const { theme, setTheme } = useContext(ThemeContext)
 
     return (
         <>
-            < Header />
+            <Header />
             <Main>
                 <Description>
-                    <h3>Olá ✌️, </h3>
-                    <H1>Sou o José Victor Desenvolvedor Web <Span theme={theme}>|</Span> Front-End</H1>
+                    <Span1>Olá ✌️, </Span1>
+                    <H1>Sou o José Victor Desenvolvedor Web <Span2 theme={theme}>|</Span2> Front-End</H1>
 
                     <P>
-                        Gosto MUITO da área de tecnologia, e tenho
-                        certeza que posso contribuir em qualquer time com as minhas habilidades.
-                        Como profissional em constante evolução na área de tecnologia, estou sempre em busca de novas oportunidades
-                        para aprender e expandir minhas experiências. Estou aberto a projetos desafiadores e colaborativos.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, sunt ducimus iusto nesciunt pariatur impedit! Vitae nulla a culpa repudiandae, atque ipsam ab fugit dolorem ipsum illo porro harum magnam.
+                    Gosto MUITO da área de tecnologia e tenho certeza que minhas habilidades podem agregar valor a qualquer equipe. Como profissional dedicado e em constante evolução no campo da tecnologia, estou continuamente em busca de novas oportunidades para aprender e enriquecer minhas experiências. Estou entusiasmado em enfrentar projetos desafiadores e colaborativos, onde possa não apenas aplicar meu conhecimento existente, mas também crescer e desenvolver novas habilidades. Minha vontade é contribuir ativamente para o progresso e a inovação, sempre aberto a desafios que me permitam expandir meus limites e conquistar novos patamares.
                     </P>
 
-                    <Div theme={theme}>
+                    <Div1 theme={theme}>
                         <a href="#">Veja o meu CV</a>
 
-                        <Hr theme={theme} 
-                        onMouseOver={ () => setTheme({...theme, opacity: 1})}
-                        onMouseOut={ () => setTheme({...theme, opacity: .6})} />
-                    </Div>
+                        <Hr theme={theme}
+                            onMouseOver={() => setTheme({ ...theme, opacity: 1 })}
+                            onMouseOut={() => setTheme({ ...theme, opacity: .6 })} />
+                    </Div1>
                 </Description>
-                <T theme={theme} onMouseOver={ () => setTheme({...theme, opacity: 1})}
-                        onMouseOut={ () => setTheme({...theme, opacity: .6})}>
-                    <Img theme={theme} src="https://placeholder.com/250x250" alt="img" />
-                </T>
+
+                <Div2 theme={theme} onMouseOver={() => setTheme({ ...theme, opacity: 1 })}
+                    onMouseOut={() => setTheme({ ...theme, opacity: .6 })}>
+                    <Img theme={theme} src={josePhoto} alt="img" />
+                </Div2>
             </Main>
 
             <Footer />
@@ -49,7 +47,11 @@ const Main = styled.main`
     max-width: 75%;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
+
+    @media (max-width: 600px) { 
+        max-width: 95%;
+    }
 
     @media (max-width: 1210px) {      
         justify-content: center;
@@ -59,6 +61,7 @@ const Main = styled.main`
             max-width: 60%;
         }
 `
+
 const Description = styled.div`
     width: 60%;
     display: flex;
@@ -69,21 +72,43 @@ const Description = styled.div`
      }
 `
 
+const Span1 = styled.span`
+    font-size: 20px;
+
+    @media (max-width: 566px) { 
+        font-size: 16px;
+    }
+`
+
 const H1 = styled.h1`
     max-width: 470px;
     margin-bottom: 20px;
+
+    @media (max-width: 566px) { 
+        font-size: 25px;
+        max-width: 370px;
+    }
+
+    @media (max-width: 439px) { 
+        max-width: 300px;
+    }
 `
 
-const Span = styled.span`
+const Span2 = styled.span`
     color: ${props => props.theme.color};
 `
 
 const P = styled.p`
-    line-height: 25px;
+    line-height: 24px;
     margin-bottom: 20px;
+
+    @media (max-width: 566px) { 
+        font-size: 14px;
+        line-height: 22px;
+    }
 `
 
-const Div = styled.div`
+const Div1 = styled.div`
  a {
     padding:0 0 8px 8px;
     display: inline-block;
@@ -94,15 +119,23 @@ const Div = styled.div`
         transform: scale(1.1);
     }
  }
+
+ @media (max-width: 566px) { 
+    font-size: 14.5px;
+ }
 `
 
 const Hr = styled(DefaultHr)`
     width: 120px;
     background: ${props => props.theme.color};
     opacity: ${props => props.theme.opacity};
+
+    @media (max-width: 566px) { 
+        width: 114px;
+     }
 `
 
-const T = styled.div`
+const Div2 = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -116,8 +149,11 @@ const T = styled.div`
     @media (max-width: 1210px) {      
         display: none;
      }
-    `
+`
+
 const Img = styled.img`
+    width: 250px;
+    height: 250px;
     border-radius: 25px;
     border-bottom-left-radius: 70px;
     border-top-right-radius: 70px;

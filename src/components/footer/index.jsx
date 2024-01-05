@@ -26,4 +26,9 @@ const Hr = styled(DefaultHr)`
    width: 300px;
    background: ${props => props.theme.color};
    opacity: ${props => props.theme.opacity};
+
+   @media (max-width: 425px) {
+    width: 250px;
+    margin-top: 20px;
+    }
 `
