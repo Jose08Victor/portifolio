@@ -60,7 +60,7 @@ const H1 = styled.h1`
     }
 
     @media(max-width: 560px) {
-        font-size: 25px;
+        font-size: 24px;
         margin-bottom: 0px;
     }
 `
@@ -117,6 +117,7 @@ const Div2 = styled.div`
 @media(max-width: 400px) {
     width: 50px;
     height: 200px;
+    gap: 10px;
 }
 
 `
@@ -152,7 +153,7 @@ const Div3 = styled.div`
         flex-direction: column;
         align-items: center;
         gap: 10px;
-        font-size: 14px;
+        font-size: 13px;
     }
 `
 
@@ -182,7 +183,7 @@ const P = styled.p`
     margin-bottom: 10px;
 
     @media(max-width: 560px) {
-        font-size: 13px;
+        font-size: 12px;
         margin-bottom: 0px;
         line-height: 16.5px;
     }

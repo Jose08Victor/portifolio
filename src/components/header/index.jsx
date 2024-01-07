@@ -88,20 +88,20 @@ const Div = styled.div`
     @media (max-width: 600px) {
         gap: 10px;
         a {
-            font-size: 18px;
+            font-size: 17px;
 
             &.active {
-                transform: scale(1.2);
+                transform: scale(1.15);
             }
         }
     }
 
     @media (max-width: 375px) {
         a {
-            font-size: 16px;
+            font-size: 15px;
 
             &.active {
-                transform: scale(1.15);
+                transform: scale(1.1);
             }
         }
     }
@@ -121,6 +121,10 @@ const Logo = styled.img`
     width: 80px;
     height: 80px;
     background-size: 60px 60px;
+
+    &:hover {
+        transform: scale(1.05);
+    }
     }
 `
 
@@ -130,10 +134,10 @@ const Hr = styled(DefaultHr)`
     opacity: ${props => props.theme.opacity};
 
     @media (max-width: 600px) {
-        width: 140px;
+        width: 120px;
            }
 
     @media (max-width: 400px) {
-        width: 100px;
+        width: 80px;
         }
 `

@@ -94,7 +94,7 @@ const Titles = styled.ul`
     }
 
     @media(max-width: 560px) {
-        font-size: 13.2px;
+        font-size: 12.4px;
         margin-bottom: 20px;
     }
 `

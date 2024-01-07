@@ -56,7 +56,7 @@ const Ul = styled.ul`
     margin: 15px auto;
 
     @media (max-width: 425px) {
-      width: 230px;
+      width: 220px;
       margin: auto;
       }
 `

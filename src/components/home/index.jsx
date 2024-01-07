@@ -21,13 +21,13 @@ export const Home = () => {
                     Gosto MUITO da área de tecnologia e tenho certeza que minhas habilidades podem agregar valor a qualquer equipe. Como profissional dedicado e em constante evolução no campo da tecnologia, estou continuamente em busca de novas oportunidades para aprender e enriquecer minhas experiências. Estou entusiasmado em enfrentar projetos desafiadores e colaborativos, onde possa não apenas aplicar meu conhecimento existente, mas também crescer e desenvolver novas habilidades. Minha vontade é contribuir ativamente para o progresso e a inovação, sempre aberto a desafios que me permitam expandir meus limites e conquistar novos patamares.
                     </P>
 
-                    <Div1 theme={theme}>
+                    {/* <Div1 theme={theme}>
                         <a href="#">Veja o meu CV</a>
 
                         <Hr theme={theme}
                             onMouseOver={() => setTheme({ ...theme, opacity: 1 })}
                             onMouseOut={() => setTheme({ ...theme, opacity: .6 })} />
-                    </Div1>
+                    </Div1> */}
                 </Description>
 
                 <Div2 theme={theme} onMouseOver={() => setTheme({ ...theme, opacity: 1 })}
@@ -50,7 +50,7 @@ const Main = styled.main`
     margin-bottom: 35px;
 
     @media (max-width: 600px) { 
-        max-width: 95%;
+        max-width: 96%;
     }
 
     @media (max-width: 1210px) {      
@@ -76,7 +76,7 @@ const Span1 = styled.span`
     font-size: 20px;
 
     @media (max-width: 566px) { 
-        font-size: 16px;
+        font-size: 15px;
     }
 `
 
@@ -85,11 +85,11 @@ const H1 = styled.h1`
     margin-bottom: 20px;
 
     @media (max-width: 566px) { 
-        font-size: 25px;
-        max-width: 370px;
+        font-size: 24px;
+        max-width: 360px;  
     }
 
-    @media (max-width: 439px) { 
+    @media (max-width: 416px) { 
         max-width: 300px;
     }
 `
@@ -103,37 +103,37 @@ const P = styled.p`
     margin-bottom: 20px;
 
     @media (max-width: 566px) { 
-        font-size: 14px;
+        font-size: 13px;
         line-height: 22px;
     }
 `
 
-const Div1 = styled.div`
- a {
-    padding:0 0 8px 8px;
-    display: inline-block;
-    transition: .3s ease-in-out;
+// const Div1 = styled.div`
+//  a {
+//     padding:0 0 8px 8px;
+//     display: inline-block;
+//     transition: .3s ease-in-out;
 
-    &:hover {
-        color: ${props => props.theme.color};
-        transform: scale(1.1);
-    }
- }
+//     &:hover {
+//         color: ${props => props.theme.color};
+//         transform: scale(1.1);
+//     }
+//  }
 
- @media (max-width: 566px) { 
-    font-size: 14.5px;
- }
-`
+//  @media (max-width: 566px) { 
+//     font-size: 13.5px;
+//  }
+// `
 
-const Hr = styled(DefaultHr)`
-    width: 120px;
-    background: ${props => props.theme.color};
-    opacity: ${props => props.theme.opacity};
+// const Hr = styled(DefaultHr)`
+//     width: 120px;
+//     background: ${props => props.theme.color};
+//     opacity: ${props => props.theme.opacity};
 
-    @media (max-width: 566px) { 
-        width: 114px;
-     }
-`
+//     @media (max-width: 566px) { 
+//         width: 105px;
+//      }
+// `
 
 const Div2 = styled.div`
     display: flex;
