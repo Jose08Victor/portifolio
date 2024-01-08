@@ -58,12 +58,17 @@ const HeadeR = styled.header`
     @media (min-width: 1450px) {
         margin-bottom: 60px;
     }
+
+    @media (max-width: 400px) {
+        width: 90%;
+    }
 `
 
 const Div = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1;
     gap: 20px;
 
     a {
@@ -86,17 +91,17 @@ const Div = styled.div`
     }
 
     @media (max-width: 600px) {
-        gap: 10px;
+        gap: 8px;
         a {
             font-size: 17px;
-
+            
             &.active {
                 transform: scale(1.15);
             }
         }
     }
 
-    @media (max-width: 375px) {
+    @media (max-width: 475px) {
         a {
             font-size: 15px;
 
@@ -118,26 +123,26 @@ const Logo = styled.img`
     }   
     
     @media (max-width: 600px) {
-    width: 80px;
-    height: 80px;
-    background-size: 60px 60px;
+        width: 80px;
+        height: 80px;
+        background-size: 60px 60px;
 
-    &:hover {
-        transform: scale(1.05);
-    }
+        &:hover {
+            transform: scale(1.05);
+        }
     }
 `
 
 const Hr = styled(DefaultHr)`
-    width: 190px;
+    width: 50%;
     background: ${props => props.theme.color};
     opacity: ${props => props.theme.opacity};
 
-    @media (max-width: 600px) {
-        width: 120px;
-           }
+    @media (max-width: 1024px) {
+        width: 80%;
+    }
 
-    @media (max-width: 400px) {
-        width: 80px;
-        }
+    @media (max-width: 520px) {
+        width: 96%;
+    }
 `

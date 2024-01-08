@@ -101,25 +101,24 @@ const Pc = styled.img`
 `
 
 const Div2 = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 300px;
-  width: 112px;
-  align-items: center;
-  justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 112px;
+    align-items: center;
+    justify-content: space-around;
 
-  @media(max-width: 560px) {
-    justify-content: center;
-    gap: 20px;
-    height: 250px;
-}
+    @media(max-width: 560px) {
+        justify-content: center;
+        gap: 20px;
+        height: 250px;
+    }
 
-@media(max-width: 400px) {
-    width: 50px;
-    height: 200px;
-    gap: 10px;
-}
-
+    @media(max-width: 400px) {
+        width: 50px;
+        height: 200px;
+        gap: 10px;
+    }
 `
 
 const Cellphone = styled.img`
@@ -144,7 +143,6 @@ const Div3 = styled.div`
     display: flex;
     justify-content: space-between;
     
-
     ${props => !props.children[0].props.children[0].props.href && css `    
         justify-content: center;           
     `}
@@ -158,7 +156,7 @@ const Div3 = styled.div`
 `
 
 const A = styled.a`
-    p{
+    p {
         transition: .3s ease-in-out;
     
         &:hover {
@@ -185,6 +183,6 @@ const P = styled.p`
     @media(max-width: 560px) {
         font-size: 12px;
         margin-bottom: 0px;
-        line-height: 16.5px;
+        line-height: 17.5px;
     }
 `

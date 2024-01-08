@@ -79,7 +79,7 @@ const H1 = styled.h1`
     text-align: center;
     margin-bottom: 30px;
 
-    @media(min-width: 1450px){
+    @media(min-width: 1450px) {
         margin-bottom: 60px;
     }
 `
@@ -91,7 +91,7 @@ const Tools = styled.div`
     flex-wrap: wrap;
     gap: 20px;
     
-    @media(min-width: 1450px){
+    @media(min-width: 1450px) {
         margin-bottom: 60px;
         gap: 30px;
     }
@@ -100,7 +100,7 @@ const Tools = styled.div`
 const Div = styled.div`
     max-width: 300px;
 
-    @media(min-width: 1450px){
+    @media(min-width: 1450px) {
         max-width: 400px;
     }
 `

@@ -57,7 +57,7 @@ const Main = styled.main`
     justify-content: space-between;
     width: 92%;
     
-    a h2{
+    a h2 {
         transition: .3s ease-in-out;
         padding-bottom: 2px;
         text-align: center;

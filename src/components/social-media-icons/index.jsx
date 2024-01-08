@@ -49,7 +49,7 @@ export const SocialMediasIcons = () => {
 }
 
 const Ul = styled.ul`
-  display: flex;
+    display: flex;
     justify-content: space-around;
     align-items: center;
     width: 300px;
@@ -71,7 +71,7 @@ const Li = styled.li`
     @media (max-width: 425px) {
       width: 30px;
       height: 30px;
-      }
+    }
 `
 
 const Icon = styled.svg`
@@ -103,11 +103,11 @@ const EmailIcon = styled(Icon)`
     border-radius: 5px;
 
     &:hover {
-      transform: scale(1.15);
-  }
-
-  @media (max-width: 425px) {
-    width: 23px;
-    height: 18px;
+       transform: scale(1.15);
+    }
+    
+    @media (max-width: 425px) {
+      width: 23px;
+      height: 18px;
     }
 `

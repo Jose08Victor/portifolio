@@ -55,11 +55,11 @@ const Main = styled.main`
 
     @media (max-width: 1210px) {      
         justify-content: center;
-     }
+    }
 
     @media (min-width: 1450px) {      
-            max-width: 60%;
-        }
+        max-width: 60%;
+    }
 `
 
 const Description = styled.div`
@@ -148,7 +148,7 @@ const Div2 = styled.div`
 
     @media (max-width: 1210px) {      
         display: none;
-     }
+    }
 `
 
 const Img = styled.img`

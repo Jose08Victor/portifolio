@@ -3,29 +3,21 @@ import { BackgroundShapes } from "./components/back-shapes/index.jsx";
 import { GlobalStyle } from "./global-style.jsx";
 import { AppRoutes } from "./pages/routes.jsx";
 import { ThemeProvider } from "./theme-context";
-// import { Hahai } from "./teste";
-
 
 function App() {
 
   return (
     <>
-    {/* <ThemeProvider>
-
-    <Hahai/>
-
-    </ThemeProvider> */}
       <ThemeProvider>
-      
-      <GlobalStyle />
+
+        <GlobalStyle />
 
         <BackgroundShapes />
 
         <Container>
-
           <AppRoutes />
-
         </Container>
+
       </ThemeProvider>
     </>
   )
@@ -43,12 +35,12 @@ const Container = styled.div`
     align-items: center;
 
     @media(max-width: 900px) {
-      width: 98%;
-  }
+       width: 98%;
+    }
 
     @media(max-width: 475px) {
-      width: 97%;
-  }
+       width: 97%;
+    }
 `
 
 export default App
