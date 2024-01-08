@@ -30,7 +30,7 @@ Na seção de Projetos, destaco alguns dos projetos mais relevantes que desenvol
 
 - **`Funcionalidade_4`**: Ao clicar no "Logo" o site volta para a página inicial: ![Back_Home](project-assets/back-home.gif)
 
-- **`Funcionalidade_5`**: Ao clicar em qualquer um dos botões o site muda de tema, ao todo são 12 temas :) .
+- **`Funcionalidade_5`**: Ao clicar em qualquer um dos botões o site muda de tema, ao todo são 14 temas :) .
 
 - **`Funcionalidade_6`**: Em todas as páginas, estão disponíveis ícones das redes sociais que facilitam o contato direto comigo:
 
