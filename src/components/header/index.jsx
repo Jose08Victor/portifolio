@@ -23,7 +23,7 @@ export const Header = () => {
                     onMouseOut={() => setTheme({ ...theme, opacity: .6 })} />
             </Div>
 
-            <NavLink to={'/portifolio'}>
+            <NavLink to={'/home'}>
                 <Logo src={logo} alt="Logo" theme={theme}
                     onClick={() => {
                         themes.index++
@@ -91,7 +91,7 @@ const Div = styled.div`
     }
 
     @media (max-width: 600px) {
-        gap: 8px;
+        gap: 10px;
         a {
             font-size: 17px;
             

@@ -18,7 +18,7 @@ export const Footer = () => {
 }
 
 const FooteR = styled.footer`
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 `
 
 const Hr = styled(DefaultHr)`
@@ -29,6 +29,6 @@ const Hr = styled(DefaultHr)`
 
   @media (max-width: 425px) {
     width: 235px;
-    margin-top: 20px;
+    margin-top: 15px;
   }
 `
