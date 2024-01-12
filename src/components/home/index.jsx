@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { DefaultHr } from "../Default-Hr"
+// import { DefaultHr } from "../Default-Hr"
 import { Header } from "../header"
 import { Footer } from "../footer"
 import { ThemeContext } from '../../theme-context';
