@@ -23,7 +23,7 @@ export const Header = () => {
                     onMouseOut={() => setTheme({ ...theme, opacity: .6 })} />
             </Div>
 
-            <NavLink to={'/home'}>
+            <NavLink to={'/portifolio'}>
                 <Logo src={logo} alt="Logo" theme={theme}
                     onClick={() => {
                         themes.index++
