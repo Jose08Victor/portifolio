@@ -20,7 +20,7 @@
 
 <h2 id="funcionalidades-e-demonstrações-da-aplicação"><img src="./public/logo-jv.svg" alt="Logo" width="22"> Funcionalidades e Demonstrações da Aplicação</h2>
 
-- **`Funcionalidade_1`**: Na página inicial, exibo uma breve descrição dos meus objetivos acompanhada de uma foto minha. Em breve, será adicionado um botão para download do meu currículo.
+- **`Funcionalidade_1`**: Na página inicial, exibo uma breve descrição dos meus objetivos acompanhada de uma foto minha e um botão para visualizar o meu currículo.
 
 - **`Funcionalidade_2`**: 
 Na seção de Projetos, destaco alguns dos projetos mais relevantes que desenvolvi. Ao clicar em um deles, você encontrará uma breve descrição sobre o projeto, juntamente com 2 links: um direcionando para a página correspondente no GitHub e o outro para acessar o site: ![Project_Section](project-assets/project-section.gif)
