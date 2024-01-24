@@ -3,12 +3,14 @@ import { SocialMediasIcons } from "../social-media-icons"
 import { DefaultHr } from "../Default-Hr"
 import { Header } from "../header"
 import { ThemeContext, themes } from "../../theme-context"
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { Project } from "../project"
 import { NavLink } from "react-router-dom"
-import { projectData } from "../../data"
+// import { projectData } from "../../data"
+import projectsJson from "../../json/projects.json"
 
 export const Projects = () => {
+    const [data] = useState(projectsJson.data);
 
     const { theme, setTheme } = useContext(ThemeContext)
 
@@ -18,7 +20,7 @@ export const Projects = () => {
             <Main theme={theme}>
                 <Titles>
                     {
-                        projectData.map((e) => {
+                        data.map((e) => {
                             return (
                                 <Li key={e.id}
                                     theme={theme}
