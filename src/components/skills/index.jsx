@@ -3,6 +3,7 @@ import { Header } from "../header"
 import { Footer } from "../footer"
 import { useContext } from "react"
 import { ThemeContext } from "../../theme-context"
+import { skillsData } from "../../data/skills-data"
 
 export const Skills = () => {
     const { theme } = useContext(ThemeContext)
@@ -10,59 +11,25 @@ export const Skills = () => {
     return (
         <>
             <Header />
+
             <Main>
                 <H1>Linguagens e Ferramentas</H1>
 
-                <Tools>
-                    <Div>
-                        <H3 theme={theme}>JavaScript</H3>
-                        <Img src="https://placeholder.com/60" />
-                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nostrum? Corporis, ex adipisci explicabo veritatis dignissimos consectetur delectus aliquid harum.</P>
-                    </Div>
+                <Ul>
+                    {
+                        skillsData.map((e) => {
+                            return (
+                                <Li key={e.id} theme={theme}>
+                                    <H3 theme={theme}>{e.name}</H3>
 
-                    <Div>
-                        <H3 theme={theme}>JavaScript</H3>
-                        <Img src="https://placeholder.com/60" />
-                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nostrum? Corporis, ex adipisci explicabo veritatis dignissimos consectetur delectus aliquid harum.</P>
-                    </Div>
+                                    {e.icon}
 
-                    <Div>
-                        <H3 theme={theme}>JavaScript</H3>
-                        <Img src="https://placeholder.com/60" />
-                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nostrum? Corporis, ex adipisci explicabo veritatis dignissimos consectetur delectus aliquid harum.</P>
-                    </Div>
-
-                    <Div>
-                        <H3 theme={theme}>JavaScript</H3>
-                        <Img src="https://placeholder.com/60" />
-                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nostrum? Corporis, ex adipisci explicabo veritatis dignissimos consectetur delectus aliquid harum.</P>
-                    </Div>
-
-                    <Div>
-                        <H3 theme={theme}>JavaScript</H3>
-                        <Img src="https://placeholder.com/60" />
-                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nostrum? Corporis, ex adipisci explicabo veritatis dignissimos consectetur delectus aliquid harum.</P>
-                    </Div>
-
-                    <Div>
-                        <H3 theme={theme}>JavaScript</H3>
-                        <Img src="https://placeholder.com/60" />
-                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nostrum? Corporis, ex adipisci explicabo veritatis dignissimos consectetur delectus aliquid harum.</P>
-                    </Div>
-
-                    <Div>
-                        <H3 theme={theme}>JavaScript</H3>
-                        <Img src="https://placeholder.com/60" />
-                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nostrum? Corporis, ex adipisci explicabo veritatis dignissimos consectetur delectus aliquid harum.</P>
-                    </Div>
-
-                    <Div>
-                        <H3 theme={theme}>JavaScript</H3>
-                        <Img src="https://placeholder.com/60" />
-                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nostrum? Corporis, ex adipisci explicabo veritatis dignissimos consectetur delectus aliquid harum.</P>
-                    </Div>
-
-                </Tools>
+                                    <P>{e.description}</P>
+                                </Li>
+                            )
+                        })
+                    }
+                </Ul>
             </Main>
 
             <Footer />
@@ -77,14 +44,19 @@ const Main = styled.main`
 
 const H1 = styled.h1`
     text-align: center;
+    font-size: 30px;
     margin-bottom: 30px;
+
+    @media(max-width: 600px) {
+        font-size: 22px;
+    }
 
     @media(min-width: 1450px) {
         margin-bottom: 60px;
     }
 `
 
-const Tools = styled.div`
+const Ul = styled.ul`
     display: flex;
     align-items: stretch;
     justify-content: center;
@@ -97,30 +69,52 @@ const Tools = styled.div`
     }
 `
 
-const Div = styled.div`
+const Li = styled.li`
     max-width: 300px;
+    min-height: 110px;
 
-    @media(min-width: 1450px) {
+    @media(min-width: 1440px) {
         max-width: 400px;
     }
-`
 
-const Img = styled.img`
-    float: left;
-    margin-right: 10px;
-    transition: .3s ease-in-out;
+    svg {
+        width: 51px;
+        fill: ${props => props.theme.color};
+        float: left;
+        margin-right: 8px;
+        transition: .3s ease-in-out transform;
+        border-radius: 10px;
 
-    &:hover {
-    transform: scale(1.1);
+        &:hover {
+            transform: scale(1.15);
+        }
+
+        @media(max-width: 600px) {
+            width: 35px;
+        }
     }
 `
 
 const H3 = styled.h3`
-    text-align: center;
+    border-bottom: 1px solid ${props => props.theme.color};
+    margin-left: 30px;
     margin-bottom: 8px;
-    color: ${props => props.theme.color};
+    padding-bottom: 2px;
+    display: inline-block;
+    min-width: 40%;
+    font-size: 18px;
+    text-align: center;
+
+    @media(max-width: 600px) {
+        font-size: 14px;
+        margin-left: 50px;
+    }
 `
 
 const P = styled.p`
-    font-size: 15px;
+    font-size: 14px;
+
+    @media(max-width: 600px) {
+        font-size: 10px;
+    }
 `
