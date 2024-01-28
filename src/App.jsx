@@ -24,9 +24,9 @@ function App() {
 }
 
 const Container = styled.div`
-    width: 99%;
+    width: 99vw;
     background-color: #181818;
-    margin: 1vh auto auto;
+    margin: 1vh .5vw auto;
     position: relative;
     min-height: 98vh;
     display: flex;
@@ -36,6 +36,7 @@ const Container = styled.div`
 
     @media(max-width: 900px) {
        width: 98%;
+       margin: 1vh auto auto;
     }
 
     @media(max-width: 475px) {
