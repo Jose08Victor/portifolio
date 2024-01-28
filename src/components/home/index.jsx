@@ -18,7 +18,10 @@ export const Home = () => {
                     <H1>Sou o José Victor Desenvolvedor Web <Span2 theme={theme}>|</Span2> Front-End</H1>
 
                     <P>
-                    Gosto MUITO da área de tecnologia e tenho certeza que minhas habilidades podem agregar valor a qualquer equipe. Como profissional dedicado e em constante evolução no campo da tecnologia, estou continuamente em busca de novas oportunidades para aprender e enriquecer minhas experiências. Estou entusiasmado em enfrentar projetos desafiadores e colaborativos, onde possa não apenas aplicar meu conhecimento existente, mas também crescer e desenvolver novas habilidades. Minha vontade é contribuir ativamente para o progresso e a inovação, sempre aberto a desafios que me permitam expandir meus limites e conquistar novos patamares.
+                    Comecei a me interessar pela programação participando de eventos online. Desde junho de 2023, tenho dedicado meu tempo ao estudo e estou em busca da minha primeira oportunidade na área de front-end.
+                    </P>
+
+                    <P> Gosto MUITO da área de tecnologia e tenho certeza que minhas habilidades podem agregar valor a qualquer equipe. Como profissional dedicado e em constante evolução no campo da tecnologia, estou continuamente em busca de novas oportunidades para aprender e enriquecer minhas experiências.
                     </P>
 
                     <Div1 theme={theme}>
@@ -69,14 +72,18 @@ const Description = styled.div`
 
     @media (max-width: 1210px) {      
         width: 90%;
-     }
+    }
+
+    @media (max-width: 416px) { 
+        width: 97%;
+    }
 `
 
 const Span1 = styled.span`
     font-size: 20px;
 
     @media (max-width: 566px) { 
-        font-size: 15px;
+        font-size: 14.2px;
     }
 `
 
@@ -89,8 +96,10 @@ const H1 = styled.h1`
         max-width: 360px;  
     }
 
-    @media (max-width: 416px) { 
-        max-width: 300px;
+    @media (max-width: 390px) { 
+        font-size: 20px;
+        max-width: 305px;
+        margin-bottom: 16px;
     }
 `
 
@@ -103,8 +112,9 @@ const P = styled.p`
     margin-bottom: 20px;
 
     @media (max-width: 566px) { 
-        font-size: 13px;
+        font-size: 12.5px;
         line-height: 22px;
+        margin-bottom: 15px;
     }
 `
 
@@ -121,7 +131,7 @@ const Div1 = styled.div`
  }
 
  @media (max-width: 566px) { 
-    font-size: 13.5px;
+    font-size: 13px;
  }
 `
 
@@ -149,6 +159,11 @@ const Div2 = styled.div`
     @media (max-width: 1210px) {      
         display: none;
     }
+
+    @media (min-width: 1900px) {
+        width: 338px;
+        height: 338px;
+    }
 `
 
 const Img = styled.img`
@@ -157,4 +172,9 @@ const Img = styled.img`
     border-radius: 25px;
     border-bottom-left-radius: 70px;
     border-top-right-radius: 70px;
+
+    @media (min-width: 1900px) {
+        width: 330px;
+        height: 330px;
+    }
 `
