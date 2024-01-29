@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
  export const DefaultHr  = styled.hr`
     height: 2px;

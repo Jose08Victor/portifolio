@@ -1,6 +1,6 @@
-import styled from "styled-components"
-import { DefaultHr } from "../Default-Hr"
-import { SocialMediasIcons } from "../social-media-icons"
+import styled from "styled-components";
+import { DefaultHr } from "../Default-Hr";
+import { SocialMediasIcons } from "../social-media-icons";
 import { ThemeContext } from '../../theme-context';
 import { useContext } from "react";
 

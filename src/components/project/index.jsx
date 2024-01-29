@@ -1,9 +1,9 @@
-import styled, { css } from "styled-components"
-import { DefaultHr } from "../Default-Hr"
-import { useContext } from "react"
-import { ThemeContext } from "../../theme-context"
-import { useLocation } from "react-router-dom"
-import { projectsData } from "../../data/projects-data"
+import styled, { css } from "styled-components";
+import { DefaultHr } from "../Default-Hr";
+import { useContext } from "react";
+import { ThemeContext } from "../../theme-context";
+import { useLocation } from "react-router-dom";
+import { projectsData } from "../../data/projects-data";
 
 export const Project = () => {
 

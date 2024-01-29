@@ -1,15 +1,15 @@
-import desktopProject1Image from "../assets/desktop-pokemon-project.png"
-import mobileProject1Image from "../assets/mobile-pokemon-project.png"
-import desktopProject2Image from "../assets/desktop-section-project.png"
-import mobileProject2Image from "../assets/mobile-section-project.png"
-import desktopProject3Image from "../assets/desktop-tecnologias-project.png"
-import mobileProject3Image from "../assets/mobile-tecnologias-project.png"
-import desktopProject4Image from "../assets/desktop-landing-page-project.gif"
-import mobileProject4Image from "../assets/mobile-landing-page-project.gif"
-import desktopProject5Image from "../assets/desktop-git-hub-project.png"
-import mobileProject5Image from "../assets/mobile-git-hub-project.png"
-import desktopProject6Image from "../assets/desktop-portfolio-project.png"
-import mobileProject6Image from "../assets/mobile-portfolio-project.png"
+import desktopProject1Image from "../assets/desktop-pokemon-project.png";
+import mobileProject1Image from "../assets/mobile-pokemon-project.png";
+import desktopProject2Image from "../assets/desktop-section-project.png";
+import mobileProject2Image from "../assets/mobile-section-project.png";
+import desktopProject3Image from "../assets/desktop-tecnologias-project.png";
+import mobileProject3Image from "../assets/mobile-tecnologias-project.png";
+import desktopProject4Image from "../assets/desktop-landing-page-project.gif";
+import mobileProject4Image from "../assets/mobile-landing-page-project.gif";
+import desktopProject5Image from "../assets/desktop-git-hub-project.png";
+import mobileProject5Image from "../assets/mobile-git-hub-project.png";
+import desktopProject6Image from "../assets/desktop-portfolio-project.png";
+import mobileProject6Image from "../assets/mobile-portfolio-project.png";
 
 export const projectsData = [
     {

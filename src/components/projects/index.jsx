@@ -1,12 +1,12 @@
-import styled, { css } from "styled-components"
-import { SocialMediasIcons } from "../social-media-icons"
-import { DefaultHr } from "../Default-Hr"
-import { Header } from "../header"
-import { ThemeContext, themes } from "../../theme-context"
-import { useContext } from "react"
-import { Project } from "../project"
-import { NavLink } from "react-router-dom"
-import { projectsData } from "../../data/projects-data"
+import styled, { css } from "styled-components";
+import { SocialMediasIcons } from "../social-media-icons";
+import { DefaultHr } from "../Default-Hr";
+import { Header } from "../header";
+import { ThemeContext, themes } from "../../theme-context";
+import { useContext } from "react";
+import { Project } from "../project";
+import { NavLink } from "react-router-dom";
+import { projectsData } from "../../data/projects-data";
 
 export const Projects = () => {
 
