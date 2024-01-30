@@ -125,10 +125,11 @@ const Ul = styled.ul`
         }
 
         @media(max-width: 600px) {
-            width: 125px;
+            width: 85px;
 
             svg {
                 width: 35px;
+                margin-bottom: 4px;
             }
         }
     }
@@ -149,13 +150,14 @@ const H3 = styled.h3`
     margin: 5px 0;
     padding-bottom: 2px;
     font-size: 17px;
+    text-align: center;
 
     @media(min-width: 1450px) {
         font-size: 20px;
     }
 
     @media(max-width: 600px) {
-        font-size: 13.2px;
+        font-size: 13px;
     }
 `
 
@@ -169,8 +171,9 @@ const Div = styled.div`
     padding: 10px;
 
     @media(min-width: 1450px) {
-        max-width: 700px;
+        max-width: 750px;
         font-size: 17.5px;
+        padding: 15px;
     }
     
     @media(max-width: 600px) {
