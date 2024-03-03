@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { BackgroundShapes } from "./components/back-shapes/index.jsx";
+import { BackgroundShapes } from "./components/back-shapes";
 import { GlobalStyle } from "./global-style.jsx";
-import { AppRoutes } from "./pages/routes.jsx";
+import { AppRoutes } from "./routes";
 import { ThemeProvider } from "./theme-context";
 
 function App() {
