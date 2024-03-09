@@ -1,34 +1,15 @@
-import styled from "styled-components";
-import { DefaultHr } from "../Default-Hr";
+import { FooteR, Hr } from "./styles"
 import { SocialMediasIcons } from "../social-media-icons";
 import { ThemeContext } from '../../theme-context';
 import { useContext } from "react";
 
 export const Footer = () => {
-  const { theme, setTheme } = useContext(ThemeContext)
+  const { theme, changeOpacity } = useContext(ThemeContext)
 
   return (
     <FooteR>
       <SocialMediasIcons />
-      <Hr theme={ theme } 
-        onMouseOver={ () => setTheme({...theme, opacity: 1})}
-        onMouseOut={ () => setTheme({...theme, opacity: .6})}/>
+      <Hr theme={ theme } onMouseOver={changeOpacity} onMouseOut={changeOpacity}/>
     </FooteR>
   )
 }
-
-const FooteR = styled.footer`
-  margin-bottom: 25px;
-`
-
-const Hr = styled(DefaultHr)`
-  margin-top: 30px;
-  width: 300px;
-  background: ${props => props.theme.color};
-  opacity: ${props => props.theme.opacity};
-
-  @media (max-width: 425px) {
-    width: 235px;
-    margin-top: 15px;
-  }
-`
