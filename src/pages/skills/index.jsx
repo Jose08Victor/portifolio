@@ -5,7 +5,7 @@ import { skillsData } from "../../data/skills-data";
 import { Main, H1, Ul, Li, H3, Div } from "./styles";
 
 export const Skills = () => {
-    const { theme, changeColor } = useContext(ThemeContext)
+    const { theme, changeColor } = useContext(ThemeContext);
 
     const [description, setDescription] = useState(skillsData[0].description);
 
@@ -33,14 +33,14 @@ export const Skills = () => {
 
                                     {e.icon}
 
-                                    <H3 theme={theme} >{e.name}</H3>
+                                    <H3>{e.name}</H3>
                                 </Li>
                             )
                         })
                     }
                 </Ul>
 
-                <Div theme={theme}>{description}</Div >
+                <Div theme={theme}>{description}</Div>
             </Main>
 
             <Footer />
