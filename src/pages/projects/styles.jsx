@@ -27,7 +27,7 @@ export const Titles = styled.ul`
     overflow-y: scroll;
     overflow-x: hidden;
     text-align: center;
-    padding: 0 20px;
+    padding: 10px 20px;
 
     &::-webkit-scrollbar {
         width: 2.75px;
@@ -40,13 +40,13 @@ export const Titles = styled.ul`
 
     @media(max-width: 950px) {
         gap: 25px;
-        height: 250px;
+        height: 265px;
     }
 
     @media(max-width: 560px) {
         font-size: 12.4px;
         margin: 30px 0 50px;
-        height: 210px;
+        height: 235px;
     }
 `
 
