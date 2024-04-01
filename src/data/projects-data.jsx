@@ -6,7 +6,7 @@ export const projectsData = [
         mobileImage: "https://raw.githubusercontent.com/Jose08Victor/portifolio/main/src/assets/mobile-space-project.png",
         site: "https://jose08victor.github.io/space-tourism-website/",
         github: "https://github.com/Jose08Victor/space-tourism-website.git",
-        "description": "Este projeto oferece uma experiência única de turismo espacial, permitindo que os participantes explorem o vasto espaço sideral. Ele apresenta destinos fascinantes, detalha as equipes envolvidas e destaca as tecnologias presentes nos veículos espaciais. O site foi constrúido com React, TypeScript e estilizado com o Styled-Components."
+        "description": "Este projeto oferece uma experiência única de turismo espacial, permitindo que os participantes explorem o vasto espaço sideral. Ele apresenta destinos fascinantes, detalha as equipes envolvidas e destaca as tecnologias presentes nos veículos espaciais. O site foi constrúido com React, TypeScript, estilizado com o Styled-Components e os testes automatizados feitos com o Jest + React Testing Library."
     }, {
         id: 2,
         title: "Pizza Delivery",
